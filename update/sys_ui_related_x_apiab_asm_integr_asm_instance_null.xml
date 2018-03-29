@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_related sys_domain="global" table="x_apiab_asm_integr_asm_instance" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="ASM Instance - Default view" name="x_apiab_asm_integr_asm_instance" related_list="NULL" sys_domain="global" view="Default view">f50d3b40db0153405bb4a961ca9619c5</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_apiab_asm_integr_asm_check.asm_instance</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-20 09:53:17</sys_created_on>
+            <sys_id>b10d3b40db0153405bb4a961ca9619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-20 09:53:17</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="ASM Instance - Default view" name="x_apiab_asm_integr_asm_instance" related_list="NULL" sys_domain="global" view="Default view">f50d3b40db0153405bb4a961ca9619c5</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_apiab_asm_integr_check_policy.asm_instance</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-20 09:53:17</sys_created_on>
+            <sys_id>b90d3b40db0153405bb4a961ca9619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-20 09:53:17</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="ASM Instance - Default view" name="x_apiab_asm_integr_asm_instance" related_list="NULL" sys_domain="global" view="Default view">f50d3b40db0153405bb4a961ca9619c5</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>x_apiab_asm_integr_asm_scenario.asm_instance</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-20 09:53:17</sys_created_on>
+            <sys_id>bd0d3b40db0153405bb4a961ca9619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-20 09:53:17</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>ASM Instance - Default view</calculated_name>
+            <filter/>
+            <name>x_apiab_asm_integr_asm_instance</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-20 09:53:17</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f50d3b40db0153405bb4a961ca9619c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ASM Instance - Default view</sys_name>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_ui_related_x_apiab_asm_integr_asm_instance_null</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-20 09:53:17</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

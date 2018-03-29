@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_apiab_asm_integr.ASMAlert</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ASMAlert</name>
+        <script><![CDATA[var ASMAlert = Class.create();
+ASMAlert.prototype = {
+	initialize: function() {
+	},
+	createITOMEvent: function(apicaAlert){
+		var retMessage = this.createStatusMessage(400,"","Bad request. Message not complete");
+		
+		var check=new GlideRecord('x_apiab_asm_integr_asm_check');
+		check.addQuery('correlation_id',apicaAlert.check_guid);
+		check.query();
+		if(check.next()){
+			var asm_instance=new GlideRecord('x_apiab_asm_integr_asm_instance');
+			asm_instance.get(check.asm_instance);
+			var event=new GlideRecord('em_event');
+			event.newRecord();
+			event.cmdb_ci= check.sys_id;
+			event.source="Apica ASM";
+			event.type="Alert";
+			event.message_key=apicaAlert.check_guid;
+			
+			
+			event.node=(apicaAlert.customer) ? apicaAlert.customer:check.asm_instance.getDisplayValue();
+			event.resource=(apicaAlert.check_name) ? apicaAlert.check_name:check.apica_name;
+			event.description=(apicaAlert.description) ? apicaAlert.description:"";
+			event.event_class=(apicaAlert.check_id) ? apicaAlert.check_id:check.apica_id;
+			var message;
+			if(apicaAlert.message)
+				message=apicaAlert.message;
+			
+			else
+				message="Alert from ASM check=["+check.apica_name+"]. New severity="+apicaAlert.new_severity+". Old serverity="+apicaAlert.old_severity;
+			
+			event.metric_name=message;
+			switch (apicaAlert.new_severity) {
+				case 'Info':
+				event.severity='5';
+				break;
+				case 'Warning':
+				event.severity='4';
+				
+				break;
+				case 'Error':
+				event.severity= '3';
+				break;
+				case 'Fatal':
+				event.severity= '1';
+				break;
+				default:
+				event.severity='6';
+			}
+			/*
+ 			* Create callback URL-s to ASM check and check result
+ 			*/
+			var checkURL=asm_instance.asm_endpoint.toString()+'/Check/Details/'+check.apica_id;
+			apicaAlert.checkURL=checkURL;
+			if(apicaAlert.result_guid){
+				var resultURL;
+				resultURL= asm_instance.asm_endpoint.toString()+'/BrowserResult/Details?checkId='+check.apica_id+'&resultId='+apicaAlert.result_guid;
+				apicaAlert.resultURL=resultURL;
+			}
+			
+			
+			
+			event.additional_info= JSON.stringify(apicaAlert);
+			var rec=event.insert();
+			if(rec != null ) {
+				
+				var jg =new JSONToGlide();
+				var eventJson =jg.unmarshall(event);
+				retMessage = this.createStatusMessage(201,rec,eventJson);
+			}
+			else {
+				retMessage = this.createStatusMessage(503,"","Failed to insert record into the em_event table.");
+			}
+			
+		} else {
+			retMessage = this.createStatusMessage(400,"","Bad request. No check with correltion id(apica guid): "+apicaAlert.check_guid);
+		}
+		
+		
+		return retMessage;
+	},
+	createStatusMessage: function(statusCode,sysid,data){
+		var obj = { "statusCode":statusCode,
+			"sysid":sysid,
+			"data":data
+		};
+		return obj;
+		
+		
+	},
+	
+	type: 'ASMAlert'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-08 15:20:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6c2803dfdbc81f0089a3d1c2ca96190f</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>ASMAlert</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_script_include_6c2803dfdbc81f0089a3d1c2ca96190f</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-21 13:48:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="cmdb_identifier">
+    <cmdb_identifier action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_to>x_apiab_asm_integr_asm_check</applies_to>
+        <description/>
+        <independent>true</independent>
+        <name>Apica GUID Rule</name>
+        <sys_class_name>cmdb_identifier</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-01-29 15:05:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ccf4af84dbcc970089a3d1c2ca9619e5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Apica GUID Rule</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>cmdb_identifier_ccf4af84dbcc970089a3d1c2ca9619e5</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-01-29 15:07:11</sys_updated_on>
+    </cmdb_identifier>
+</record_update>

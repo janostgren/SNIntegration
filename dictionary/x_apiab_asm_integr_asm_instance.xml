@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="cmdb_ci_appl" label="ASM Instance" max_length="40" name="x_apiab_asm_integr_asm_instance" sizeclass="2" type="collection">
+        <element default="https://api-wpm.apicasystem.com" label="API Endpoint" mandatory="true" max_length="60" name="api_endpoint" type="string"/>
+        <element label="API Ticket" mandatory="true" max_length="40" name="api_ticket" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="https://wpm.apicasystem.com" label="ASM Endpoint" max_length="80" name="asm_endpoint" type="url"/>
+    </element>
+</database>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_apiab_asm_integr.JSONToGlide</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>JSONToGlide</name>
+        <script><![CDATA[var JSONToGlide = Class.create();
+JSONToGlide.prototype = {
+	initialize: function() {
+	},
+	
+	marshall: function(json) {
+		if (!this.validateCollectionExists(json._collection_type)) {
+			gs.log("INVALID COLLECTION : " + json._collection_type, "JSONtoGlide");
+			return '';
+		}
+		var glideRecord = new GlideRecord(json._collection_type),
+		item;
+		if (!json.hasOwnProperty('sys_id')) {
+			glideRecord.initialize();
+		} else {
+			glideRecord.get(json.sys_id);
+		}
+		for (item in json) {
+			if (json.hasOwnProperty(item)) {
+				glideRecord.setValue(item, json[item]);
+			}
+		}
+		if (!json.hasOwnProperty('sys_id')) {
+			glideRecord.insert();
+		} else {
+			glideRecord.update();
+		}
+		return glideRecord;
+	},
+	unmarshall: function(record) {
+		var field,value;
+		var resultObject = {
+			
+		};
+		var gr = new GlideRecord('sys_dictionary');
+		
+		gr.addQuery('name',record.getTableName());
+		gr.query();
+		if(gr.next()) {
+			while(gr.next()) {
+				field=gr.element;
+				value=record[field];
+				resultObject[field] =value.toString();
+				
+			}
+		}
+		/*
+		
+		var field;
+		
+		for (field in fields) {
+			resultObject[fields[field]] = record.getValue(fields[field]);
+		}
+		*/
+		return resultObject;
+ 		
+	},
+	validateCollectionExists: function(name) {
+		var table = new GlideRecord('sys_db_object');
+		if (table.get('name', name)) {
+			return true;
+		}
+		return false;
+	},
+	type: 'JSONToGlide'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-15 19:41:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e8154cf1db1413405bb4a961ca961928</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>JSONToGlide</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_script_include_e8154cf1db1413405bb4a961ca961928</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-16 08:11:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

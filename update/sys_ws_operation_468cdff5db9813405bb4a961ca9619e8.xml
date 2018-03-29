@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_apiab_asm_integr/asmalert/itomevent</default_operation_uri>
+        <enforce_acl>1424ef01db49d3405bb4a961ca96196d</enforce_acl>
+        <http_method>POST</http_method>
+        <name>CreateITOMEvent</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	
+	var requestBody = request.body;
+	var requestString = requestBody.dataString;
+	var requestJson = JSON.parse(requestString);
+	
+	var asmAlert = new ASMAlert();
+	var res=asmAlert.createITOMEvent(requestJson);
+	if(res.statusCode == 201) {
+		response.setBody(res.data);
+		response.setStatus(res.statusCode);
+	}
+	else {
+		response.setError(new sn_ws_err.BadRequestError(res.data));
+	}
+	
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_apiab_asm_integr/v1/asmalert/itomevent</operation_uri>
+        <produces>application/json, text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/itomevent</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-16 11:29:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>468cdff5db9813405bb4a961ca9619e8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>CreateITOMEvent</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_ws_operation_468cdff5db9813405bb4a961ca9619e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-23 11:12:20</sys_updated_on>
+        <web_service_definition display_value="ASMAlert">6d76fa97dbc81f0089a3d1c2ca961947</web_service_definition>
+        <web_service_version display_value="v1">47b87e97dbc81f0089a3d1c2ca96196b</web_service_version>
+    </sys_ws_operation>
+</record_update>

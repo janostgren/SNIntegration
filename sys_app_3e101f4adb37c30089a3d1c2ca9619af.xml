@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <enforce_license>log</enforce_license>
+        <js_level>helsinki_es5</js_level>
+        <licensable>true</licensable>
+        <license_model>none</license_model>
+        <logo/>
+        <menu/>
+        <name>ASM Integrator</name>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_apiab_asm_integr</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description/>
+        <source>x_apiab_asm_integr</source>
+        <store_correlation_id>REPOAPP0000052763</store_correlation_id>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-01-23 08:26:23</sys_created_on>
+        <sys_id>3e101f4adb37c30089a3d1c2ca9619af</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-21 07:59:13</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <user_role/>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.22</version>
+    </sys_app>
+</record_update>

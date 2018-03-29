@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="ecc_agent_ip_range">
+    <ecc_agent_ip_range action="INSERT_OR_UPDATE">
+        <name>all</name>
+        <range>0.0.0.0</range>
+        <sys_class_name>ecc_agent_ip_range</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-23 07:28:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2e0c620cdba817405bb4a961ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>all</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>ecc_agent_ip_range_2e0c620cdba817405bb4a961ca96199e</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-23 07:28:18</sys_updated_on>
+        <type>include</type>
+    </ecc_agent_ip_range>
+</record_update>

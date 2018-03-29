@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="category" table="x_apiab_asm_integr_apica_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Assesment</label>
+            <language>en</language>
+            <name>x_apiab_asm_integr_apica_request</name>
+            <sequence/>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-02 13:14:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>365e7f5adbe0d3005bb4a961ca961982</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-02 13:14:01</sys_updated_on>
+            <value>assesment</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Check development</label>
+            <language>en</language>
+            <name>x_apiab_asm_integr_apica_request</name>
+            <sequence/>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-02 13:06:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>febcbf1adbe0d3005bb4a961ca96193e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-02 13:06:55</sys_updated_on>
+            <value>check_development</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Check maintenance</label>
+            <language>en</language>
+            <name>x_apiab_asm_integr_apica_request</name>
+            <sequence/>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-02 13:06:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c74cff1adbe0d3005bb4a961ca9619c4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-02 13:07:59</sys_updated_on>
+            <value>check_maintenance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Dashboard/Panels</label>
+            <language>en</language>
+            <name>x_apiab_asm_integr_apica_request</name>
+            <sequence/>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-02 13:12:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a41ef39adbe0d3005bb4a961ca961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-02 13:12:46</sys_updated_on>
+            <value>dashboard_panels</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Load test</label>
+            <language>en</language>
+            <name>x_apiab_asm_integr_apica_request</name>
+            <sequence/>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-02 13:12:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>728d7f5adbe0d3005bb4a961ca96197f</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-02 13:14:28</sys_updated_on>
+            <value>load_test</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <name>x_apiab_asm_integr_apica_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-02 13:06:30</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a0acf31adbe0d3005bb4a961ca96192c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>category</sys_name>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_choice_x_apiab_asm_integr_apica_request_category</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-02 13:06:30</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

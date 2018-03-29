@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Additional information from Apica " section_id="320c005adbb7c30089a3d1c2ca9619f4" sys_domain="global" table="x_apiab_asm_integr_asm_check" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>correlation_id</element>
+            <position>0</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>8fdae7a8db10df0089a3d1c2ca9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>apica_id</element>
+            <position>1</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>03dae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>apica_name</element>
+            <position>2</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>83dae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>url</element>
+            <position>3</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>07dae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>apica_location</element>
+            <position>4</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>87dae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>country_code</element>
+            <position>5</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>0bdae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>8bdae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>check_type</element>
+            <position>7</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>0fdae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>check_type_name</element>
+            <position>8</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>8fdae7a8db10df0089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>check_type_api</element>
+            <position>9</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>03dae7a8db10df0089a3d1c2ca9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sla_current_month</element>
+            <position>10</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>83dae7a8db10df0089a3d1c2ca9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>target_sla</element>
+            <position>11</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-12 15:03:46</sys_created_on>
+            <sys_id>07dae7a8db10df0089a3d1c2ca9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-12 15:03:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Additional information from Apica </caption>
+            <header>false</header>
+            <name>x_apiab_asm_integr_asm_check</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-23 12:48:15</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>320c005adbb7c30089a3d1c2ca9619f4</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Additional information from Apica </sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_ui_section_320c005adbb7c30089a3d1c2ca9619f4</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 14:44:38</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

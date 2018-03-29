@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="720c005adbb7c30089a3d1c2ca9619f5" sys_domain="global" table="x_apiab_asm_integr_asm_check" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-23 12:48:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7a0c045adbb7c30089a3d1c2ca9619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_apiab_asm_integr_asm_check" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">720c005adbb7c30089a3d1c2ca9619f5</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">2755abc6db77c30089a3d1c2ca961940</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 12:48:15</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-23 15:04:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b44be09adbf7c30089a3d1c2ca961952</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_apiab_asm_integr_asm_check" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">720c005adbb7c30089a3d1c2ca9619f5</sys_ui_form>
+            <sys_ui_section caption="Date/Time for Record" display_value="Date/Time for Record" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">f04b609adbf7c30089a3d1c2ca9619f3</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 15:04:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-23 12:48:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>760c045adbb7c30089a3d1c2ca9619c2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_apiab_asm_integr_asm_check" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">720c005adbb7c30089a3d1c2ca9619f5</sys_ui_form>
+            <sys_ui_section caption="Additional information from Apica " display_value="Additional information from Apica " name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">320c005adbb7c30089a3d1c2ca9619f4</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 15:04:39</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-24 10:33:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>97d6b0e6dbffc30089a3d1c2ca961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_apiab_asm_integr_asm_check" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">720c005adbb7c30089a3d1c2ca9619f5</sys_ui_form>
+            <sys_ui_section caption="Apica Last Check Result" display_value="Apica Last Check Result" name="x_apiab_asm_integr_asm_check" sys_domain="global" view="Default view">5fd6fca6dbffc30089a3d1c2ca9619ab</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-24 10:33:49</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_apiab_asm_integr_asm_check</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-23 12:48:15</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>720c005adbb7c30089a3d1c2ca9619f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_apiab_asm_integr_asm_check</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_ui_form_sections_720c005adbb7c30089a3d1c2ca9619f5</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 12:48:15</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="pd_mid" name="pd_mid">d02f8bc4c3101200d7dc154d81d3ae3d</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-02-21 18:59:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a37b26bdb54174089a3d1c2ca961975</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d02f8bc4c3101200d7dc154d81d3ae3d</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_embedded_help_role_6a37b26bdb54174089a3d1c2ca961975</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-02-21 18:59:58</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

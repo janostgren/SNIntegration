@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Check Policy" max_length="40" name="x_apiab_asm_integr_check_policy" sizeclass="5" type="collection">
+        <element label="ASM Instance" mandatory="true" max_length="32" name="asm_instance" reference="x_apiab_asm_integr_asm_instance" type="reference"/>
+        <element label="Incident Category" max_length="40" name="incident_category" type="string"/>
+        <element label="Incident Subcategory" max_length="40" name="incident_subcategory" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="a_str_13" label="A str 13" language="en" table="cmdb$par1">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>a_str_13</element>
+            <help/>
+            <hint/>
+            <label>A str 13</label>
+            <language>en</language>
+            <name>cmdb$par1</name>
+            <plural>A str 13s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-23 09:02:38</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>31689b02db77c30089a3d1c2ca9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>A str 13</sys_name>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_documentation_cmdb$par1_a_str_13_en</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-23 09:02:38</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

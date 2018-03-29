@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Date and times" section_id="fbeb0baadb705f005bb4a961ca961928" sys_domain="global" table="x_apiab_asm_integr_asm_scenario" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>apica_created</element>
+            <position>0</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:55</sys_created_on>
+            <sys_id>04fb4baadb705f005bb4a961ca961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date and times" display_value="Date and times" name="x_apiab_asm_integr_asm_scenario" sys_domain="global" view="Default view">fbeb0baadb705f005bb4a961ca961928</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>apica_updated</element>
+            <position>1</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:55</sys_created_on>
+            <sys_id>84fb4baadb705f005bb4a961ca961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date and times" display_value="Date and times" name="x_apiab_asm_integr_asm_scenario" sys_domain="global" view="Default view">fbeb0baadb705f005bb4a961ca961928</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ui_ng_relation_formatter.xml</element>
+            <position>2</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:55</sys_created_on>
+            <sys_id>08fb4baadb705f005bb4a961ca961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="CI Relations">b62309137f32310009fedf92bdfa912b</sys_ui_formatter>
+            <sys_ui_section caption="Date and times" display_value="Date and times" name="x_apiab_asm_integr_asm_scenario" sys_domain="global" view="Default view">fbeb0baadb705f005bb4a961ca961928</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:55</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:55</sys_created_on>
+            <sys_id>c8fb4baadb705f005bb4a961ca961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date and times" display_value="Date and times" name="x_apiab_asm_integr_asm_scenario" sys_domain="global" view="Default view">fbeb0baadb705f005bb4a961ca961928</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:55</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_on</element>
+            <position>4</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:55</sys_created_on>
+            <sys_id>4cfb4baadb705f005bb4a961ca961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date and times" display_value="Date and times" name="x_apiab_asm_integr_asm_scenario" sys_domain="global" view="Default view">fbeb0baadb705f005bb4a961ca961928</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_updated_on</element>
+            <position>5</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:55</sys_created_on>
+            <sys_id>ccfb4baadb705f005bb4a961ca961963</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Date and times" display_value="Date and times" name="x_apiab_asm_integr_asm_scenario" sys_domain="global" view="Default view">fbeb0baadb705f005bb4a961ca961928</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Date and times</caption>
+            <header>false</header>
+            <name>x_apiab_asm_integr_asm_scenario</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-03-15 14:27:54</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fbeb0baadb705f005bb4a961ca961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Date and times</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_ui_section_fbeb0baadb705f005bb4a961ca961928</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-03-15 14:27:54</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_apiab_asm_integr.ASMRestAPi</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ASMRestAPi</name>
+        <script><![CDATA[var ASMRestAPi = Class.create();
+ASMRestAPi.prototype = {
+	initialize: function() {
+	},getChecks :function(asmInstance){
+		try {
+			
+			var r = new sn_ws.RESTMessageV2('x_apiab_asm_integr.Apica Checks', 'DefaultGet');
+			r.setStringParameterNoEscape('apicaURL', asmInstance.api_endpoint);
+			r.setStringParameterNoEscape('auth_ticket', asmInstance.api_ticket);
+			
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			if (httpStatus == 200) {
+				json=JSON.parse(responseBody);
+				for (var i in json) {
+					var check= json[i];
+					var gr=new GlideRecord('x_apiab_asm_integr_asm_check');
+					var insert=true;
+					gr.addQuery('correlation_id',check.guid);
+					gr.query();
+					if(gr.next()) {
+						insert=false;
+					} else {
+						insert=true;
+						gr.initialize();
+						gr.newRecord();
+						gr.correlation_id=check.guid;
+						
+					}
+					gr.asm_instance=asmInstance.sys_id;
+					this.setCheckProperties(gr,check);
+					if(insert) {
+						gr.insert();
+					} else {
+						gr.update();
+					}
+				}
+			}
+			return httpStatus;
+			
+		}
+		catch(ex) {
+			gs.error("failed to execute Outbound web service Apica Checks. Message:",ex);
+		}
+		return 400;
+		
+	},
+	getChecksAllInstances: function() {
+		var asmInstance=new GlideRecord('x_apiab_asm_integr_asm_instance');
+		asmInstance.query();
+		while (asmInstance.next()) {
+			
+			if(asmInstance.operational_status==1) {
+				this.getChecks(asmInstance);
+				this.getScenarios(asmInstance);
+			}
+		}
+		
+	},
+	getCheckInfo: function(asmCheck){
+		var asmInstance=new GlideRecord('x_apiab_asm_integr_asm_instance');
+		if( asmInstance.get(asmCheck.asm_instance)) {
+			var rest = new sn_ws.RESTMessageV2('x_apiab_asm_integr.Apica Check Results', 'DefaultGet');
+			rest.setStringParameterNoEscape('apicaURL', asmInstance.api_endpoint);
+			rest.setStringParameterNoEscape('auth_ticket', asmInstance.api_ticket);
+			rest.setStringParameterNoEscape('check_id', asmCheck.apica_id);
+			var response = rest.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			if(httpStatus == 200) {
+				json=JSON.parse(responseBody);
+				this.setCheckProperties(asmCheck,json);
+				asmCheck.update();
+			}
+			return httpStatus;
+		}
+		return 400;
+	},
+	
+	getScenarios: function(asmInstance) {
+		this.getScenariosOfType(asmInstance,"browser");
+		this.getScenariosOfType(asmInstance,"zebratester");
+		
+		
+	},
+	
+	getScenariosOfType: function(asmInstance,type) {
+		try {
+			var r = new sn_ws.RESTMessageV2('x_apiab_asm_integr.Apica Scenarios', 'DefaultPOST');
+			r.setStringParameterNoEscape('apicaURL', asmInstance.api_endpoint);
+			r.setStringParameterNoEscape('type', type);
+			r.setStringParameterNoEscape('auth_ticket', asmInstance.api_ticket);
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			if (httpStatus == 200) {
+				var json=JSON.parse(responseBody);
+				for (var i in json) {
+					var scenario= json[i];
+					var gr=new GlideRecord('x_apiab_asm_integr_asm_scenario');
+					var insert=true;
+					gr.addQuery('asm_instance',asmInstance.sys_id);
+					gr.addQuery('correlation_id',scenario.id);
+					gr.query();
+					if(gr.next()) {
+						insert=false;
+					} else {
+						insert=true;
+						gr.initialize();
+						gr.newRecord();
+						gr.correlation_id=scenario.id;
+						gr.asm_instance=asmInstance.sys_id;
+						
+					}
+					gr.scenario_type=type;
+					gr.apica_created = new GlideDateTime(scenario.created_utc);
+					gr.apica_updated = new GlideDateTime(scenario.updated_utc != undefined ? scenario.updated_utc:scenario.created_utc);
+					switch(type) {
+						case 'browser':
+						gr.name= scenario.name;
+						break;
+						case 'zebratester':
+						gr.name= scenario.original_filename;
+						gr.runtime_version= scenario.zebratester_version;
+						break;
+						default:
+						break;
+						
+					}
+					
+					if(insert) {
+						gr.insert();
+					} else {
+						gr.update();
+					}
+					var relChecks=[];
+					var relationName= "Used by::Uses";
+					for (var j in scenario.associated_check_ids) {
+						
+						
+						var check_id = scenario.associated_check_ids[j];
+						var check=new GlideRecord('x_apiab_asm_integr_asm_check');
+						check.addQuery('apica_id',check_id);
+						check.addQuery('asm_instance',asmInstance.sys_id);
+						check.query();
+						if(check.next()) {
+							if(check.asm_scenario != gr.sys_id) {
+								check.asm_scenario= gr.sys_id;
+								check.update();
+							}
+							relChecks.push(check.sys_id);
+							// Update or Create a cmdb relationship between scenario and check
+							var rel = new GlideRecord('cmdb_rel_ci');
+							rel.addQuery('parent',gr.sys_id);
+							rel.addQuery('child',check.sys_id);
+							rel.query();
+							if(!rel.next()) {
+								rel.initialize();
+								rel.parent= gr.sys_id;
+								rel.child=check.sys_id;
+								rel.type.setDisplayValue( relationName);
+								rel.insert();
+							}
+							//Delete only for test purpose. Do not uncomment.
+							/*
+							else
+								rel.deleteRecord();
+ 							*/
+						}
+					}
+					/*
+ 					* Iterate over all relationships and remove invalid relationsships
+ 					*/
+					
+					var rel2 = new GlideRecord('cmdb_rel_ci');
+					rel2.addQuery('parent',gr.sys_id);
+					//rel2.addQuery('child.sys_class_name','x_apiab_asm_integr_asm_check');
+					rel2.query();
+					while (rel2.next()) {
+						
+						var rel_type = new GlideRecord('cmdb_rel_type');
+						rel_type.get(rel2.type);
+						
+						if(rel_type.name == relationName) {
+							var found = false;
+							
+							for (var x in relChecks) {
+								if(relChecks[x] == rel2.child) {
+									found=true;
+									break;
+								}
+							}
+							if(found == false)
+								rel2.deleteRecord();
+						}
+						
+					}
+					
+				}
+			}
+			return httpStatus;
+			
+		}
+		catch(ex) {
+			gs.error("failed to execute Outbound web service Apica Scenarios. Message:",ex);
+		}
+		return 400;
+		
+	},
+	
+	
+	runCheck: function(asmCheck){
+		var asmInstance=new GlideRecord('x_apiab_asm_integr_asm_instance');
+		if( asmInstance.get(asmCheck.asm_instance)) {
+			
+			var rest = new sn_ws.RESTMessageV2('x_apiab_asm_integr.Apica Run Check', 'DefaultPOST');
+			rest.setStringParameterNoEscape('apicaURL', asmInstance.api_endpoint);
+			rest.setStringParameterNoEscape('auth_ticket', asmInstance.api_ticket);
+			rest.setStringParameterNoEscape('check_id', asmCheck.apica_id);
+			var response = rest.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			return httpStatus;
+		}
+		return 400;
+	},
+	
+	
+	setCheckProperties: function(rec,check){
+		rec.name = check.name;
+		rec.apica_name = check.name;
+		rec.apica_id=check.id;
+		
+		rec.enabled=check.enabled;
+		rec.check_type=check.check_type;
+		rec.check_type_api=check.check_type_api;
+		rec.check_type_name=check.check_type_name;
+		rec.country_code=check.country_code;
+		rec.apica_location=check.location;
+		
+		rec.url= (check.url != null) ? check.url:null;
+		rec.sla_current_month= check.sla_percent_current_month;
+		rec.target_sla= check.target_sla;
+		rec.last_value=check.value;
+		rec.unit=check.unit;
+		rec.severity= check.severity;
+		if(check.timestamp_utc) {
+			rec.latest_result_timestamp= new GlideDateTime(check.timestamp_utc);
+			rec.last_result_message=check.last_result_details.message;
+		}
+		
+	} ,
+	
+	
+	type: 'ASMRestAPi'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-02 07:59:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a949a2d5db405b0089a3d1c2ca9619e6</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>ASMRestAPi</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_script_include_a949a2d5db405b0089a3d1c2ca9619e6</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-03-19 10:58:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

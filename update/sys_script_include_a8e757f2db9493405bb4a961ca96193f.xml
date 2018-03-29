@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_apiab_asm_integr.TaskEnricher</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TaskEnricher</name>
+        <script><![CDATA[var TaskEnricher = Class.create();
+TaskEnricher.prototype = {
+	initialize: function() {
+	},
+	enrichIncidentFromAlert: function(alert,task,rule) {
+		if(alert.source == 'Apica ASM'  && alert.cmdb_ci){
+			check = new GlideRecord('x_apiab_asm_integr_asm_check');
+			if( check.get(alert.cmdb_ci)) {
+				policy = new GlideRecord('x_apiab_asm_integr_check_policy');
+				if (policy.get(check.check_policy)) {
+					task.business_service= policy.business_service;
+					task.assignment_group= policy.assignment_group;
+					task.assigned_to= policy.assigned_to;
+					if(policy.incident_category)
+						task.category= policy.incident_category;
+					if(policy.incident_subcategory)
+						task.subcategory= policy.incident_subcategory;
+					task.short_description= alert.metric_name;
+					
+					task.urgency=policy.urgency;
+					if(policy.contact_type)
+						task.contact_type=policy.contact_type;
+					
+				}
+			}
+				
+		}
+	},
+	
+	type: 'TaskEnricher'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-19 13:51:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a8e757f2db9493405bb4a961ca96193f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>TaskEnricher</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_script_include_a8e757f2db9493405bb4a961ca96193f</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-21 14:14:30</sys_updated_on>
+    </sys_script_include>
+</record_update>

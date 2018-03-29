@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <content><![CDATA[    <h1 class="title topictitle1">Event Rules</h1>            <div class="body taskbody"><p class="shortdesc">Configure Event Rules for each event source to handle de-duplication, event        formatting and setting appropriate fields in alerts.        </p>        <div class="li step p">                <span class="ph cmd"><br />                </span><div class="itemgroup info">                    <div class="p">                        <div class="tablenoborder"><table class="table"><caption><span class="tablecap">Table 1. Event Rules list</span></caption><thead class="thead"><tr class="row"><th class="entry" id="d373384e48">Field</th><th class="entry" id="d373384e51">Description</th></tr></thead><tbody class="tbody"><tr class="row"><td class="entry">Name</td><td class="entry"><span class="ph">The event rule name.</span></td></tr><tr class="row"><td class="entry">Override default binding</td><td class="entry">Legacy binding criteria. <p class="p">If, in the                                                  <span class="ph uicontrol">Bind</span> section criteria have                                                not been specified or if the specified bind criteria                                                are not matched, then the legacy binding criteria                                                are considered.</p></td></tr><tr class="row"><td class="entry">Order</td><td class="entry"><span class="ph">Order in which an event rule is evaluated when                    multiple rules are defined for the same type of event. Event rules are evaluated                    in ascending order.</span></td></tr><tr class="row"><td class="entry">Source </td><td class="entry"><span class="ph">Event monitoring software that generated the                    event, such as SolarWinds or SCOM. This field has a maximum length of 100. It is                    formerly known as <span class="ph uicontrol">event_class</span>. </span></td></tr><tr class="row"><td class="entry">Updated</td><td class="entry"><span class="ph">Update date and time for the rule. </span></td></tr></tbody></table></div>                    </div>                    <div class="note note"><span class="notetitle">Note:</span> You can filter the Event Rule list to display the required subset of the                        information. However, if you create a favorite link after filtering, when                        the link is clicked the Event Rule list does not display the correct filter.                        </div>                </div>            </div>    </div>]]></content>
+        <last_sync>2018-02-13 13:47:12</last_sync>
+        <modifier>normal</modifier>
+        <name>$sa_event_rules-normal</name>
+        <page>$sa_event_rules</page>
+        <product>1</product>
+        <qualifier/>
+        <role/>
+        <role_order>1000</role_order>
+        <snc_created>true</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-01-29 13:47:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb03574cdb8c970089a3d1c2ca961931</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>$sa_event_rules-normal</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_embedded_help_content_bb03574cdb8c970089a3d1c2ca961931</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-02-13 13:47:12</sys_updated_on>
+        <version>j</version>
+    </sys_embedded_help_content>
+</record_update>

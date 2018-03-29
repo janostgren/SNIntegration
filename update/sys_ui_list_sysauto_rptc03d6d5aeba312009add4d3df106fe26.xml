@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sysauto" version="2" view="RPTc03d6d5aeba312009add4d3df106fe26">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="sysauto" element="NULL" name="sysauto" parent="NULL" relationship="NULL" sys_domain="global" view="7e200f15db805b0089a3d1c2ca9619a0">7a200f15db805b0089a3d1c2ca9619a1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-02 09:37:00</sys_created_on>
+            <sys_id>76200f15db805b0089a3d1c2ca9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-02 09:37:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>active</element>
+            <list_id display_value="sysauto" element="NULL" name="sysauto" parent="NULL" relationship="NULL" sys_domain="global" view="7e200f15db805b0089a3d1c2ca9619a0">7a200f15db805b0089a3d1c2ca9619a1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-02 09:37:00</sys_created_on>
+            <sys_id>7e200f15db805b0089a3d1c2ca9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-02 09:37:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_class_name</element>
+            <list_id display_value="sysauto" element="NULL" name="sysauto" parent="NULL" relationship="NULL" sys_domain="global" view="7e200f15db805b0089a3d1c2ca9619a0">7a200f15db805b0089a3d1c2ca9619a1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-02 09:37:00</sys_created_on>
+            <sys_id>fe200f15db805b0089a3d1c2ca9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-02 09:37:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="sysauto" element="NULL" name="sysauto" parent="NULL" relationship="NULL" sys_domain="global" view="7e200f15db805b0089a3d1c2ca9619a0">7a200f15db805b0089a3d1c2ca9619a1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-02 09:37:00</sys_created_on>
+            <sys_id>72200f15db805b0089a3d1c2ca9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-02 09:37:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sysauto</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-02-02 09:37:00</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7a200f15db805b0089a3d1c2ca9619a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sysauto</sys_name>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_ui_list_sysauto_RPTc03d6d5aeba312009add4d3df106fe26</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-02-02 09:37:00</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rptc03d6d5aeba312009add4d3df106fe26" name="RPTc03d6d5aeba312009add4d3df106fe26">7e200f15db805b0089a3d1c2ca9619a0</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

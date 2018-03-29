@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>SendTestEvent</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Send Test Event </name>
+        <onclick>OnClick</onclick>
+        <order>100</order>
+        <script><![CDATA[function safeToString (v) {
+	if( v== undefined || v== null)
+		return "";
+	else
+		return v.toString();
+		
+}
+
+function getSessionData(session,key) {
+	try {
+		var m = session.getClientData(myKey);
+		if( m!=null)
+			return JSON.parse(m);
+	}
+	catch(err) {
+		
+	}
+	return {
+		"severity":"Unknown",
+		"timeStamp":Date.now()
+	};
+}
+
+var session = gs.getSession();
+var myKey= current.sys_id+":event_data";
+var lastEvent=getSessionData(session,myKey);
+
+var now=Date.now();
+
+var severity="Unknown";
+switch(lastEvent.severity) {
+	case 'Unknown':
+	case 'Info':
+	severity= (now%10 >= 5) ?"Fatal":"Error";
+	
+	break;
+	case 'Error':
+	severity= (now%10 >= 5) ?"Fatal":"Info";
+	break;
+	case 'Fatal':
+	severity= (now%10 >= 5) ?"Error":"Info";
+	break;
+}
+
+var asmAlertMessage={
+	"check_guid":safeToString(current.correlation_id),
+	
+	"check_type":safeToString(current.check_type_name),
+	"new_severity":severity,
+	"old_severity":lastEvent.severity
+};
+var alert = new ASMAlert();
+var ret= alert.createITOMEvent(asmAlertMessage);
+
+var m = {
+	"severity":severity,
+	"timeStamp":Date.now()
+};
+
+lastEvent=JSON.stringify(m);
+session.putClientData(myKey,lastEvent);
+action.setRedirectURL(current);
+if (ret.statusCode== 201) {
+	gs.addInfoMessage("event record created sysid="+ret.sysid+". Severity="+ret.data.severity);
+	
+}
+else {
+	gs.addErrorMessage("Failed to event record. Message="+ret.data);
+	
+}
+	
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-13 08:53:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>170f5378db94df0089a3d1c2ca9619a9</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name>Send Test Event </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_ui_action_170f5378db94df0089a3d1c2ca9619a9</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-21 13:22:05</sys_updated_on>
+        <table>x_apiab_asm_integr_asm_check</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

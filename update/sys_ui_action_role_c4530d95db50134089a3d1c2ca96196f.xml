@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-14 10:48:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c4530d95db50134089a3d1c2ca96196f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Send Test Event .evt_mgmt_admin</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_ui_action display_value="Send Test Event ">170f5378db94df0089a3d1c2ca9619a9</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_c4530d95db50134089a3d1c2ca96196f</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-14 10:48:05</sys_updated_on>
+        <sys_user_role display_value="evt_mgmt_admin" name="evt_mgmt_admin">600be631eb12110045e1a5115206fe38</sys_user_role>
+    </sys_ui_action_role>
+</record_update>

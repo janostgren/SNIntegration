@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function onCancel() {
+ 
+ GlideDialogWindow.get().destroy();
+ return false;
+}
+
+function onOK() {
+ 
+ GlideDialogWindow.get().destroy();
+ return true;
+}
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_apiab_asm_integr_send_test_itom_event.do</endpoint>
+        <html><![CDATA[<g:ui_form>
+
+<input type="hidden" id="asm_check_sysid" name="asm_check_sysid" value="12"/>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+ <tr><td align="left" nowrap="true"><br /><g:dialog_buttons_ok_cancel ok="return onOK();" cancel="return onCancel();"/></td></tr>
+</table>
+</g:ui_form>]]></html>
+        <name>send_test_itom_event</name>
+        <processing_script><![CDATA[if(true) {
+	
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>jan.ostgren</sys_created_by>
+        <sys_created_on>2018-02-13 07:59:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>26e29ffcdb94df0089a3d1c2ca961968</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>send_test_itom_event</sys_name>
+        <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+        <sys_update_name>sys_ui_page_26e29ffcdb94df0089a3d1c2ca961968</sys_update_name>
+        <sys_updated_by>jan.ostgren</sys_updated_by>
+        <sys_updated_on>2018-02-13 16:09:15</sys_updated_on>
+    </sys_ui_page>
+</record_update>

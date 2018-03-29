@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="44c3622edbb3070089a3d1c2ca961912" sys_domain="global" table="x_apiab_asm_integr_check_policy" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-24 18:29:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>40c3a22edbb3070089a3d1c2ca961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_apiab_asm_integr_check_policy" name="x_apiab_asm_integr_check_policy" sys_domain="global" view="Default view">44c3622edbb3070089a3d1c2ca961912</sys_ui_form>
+            <sys_ui_section caption="Check Policy basic information" display_value="Check Policy basic information" name="x_apiab_asm_integr_check_policy" sys_domain="global" view="Default view">b27c0412dbb7c30089a3d1c2ca961910</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-24 18:29:33</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-24 18:29:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0cc3a22edbb3070089a3d1c2ca961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_apiab_asm_integr_check_policy" name="x_apiab_asm_integr_check_policy" sys_domain="global" view="Default view">44c3622edbb3070089a3d1c2ca961912</sys_ui_form>
+            <sys_ui_section caption="Defaults generated Alerts &amp; Incidents" display_value="Defaults generated Alerts &amp; Incidents" name="x_apiab_asm_integr_check_policy" sys_domain="global" view="Default view">04c3622edbb3070089a3d1c2ca961911</sys_ui_section>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-24 18:29:33</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_apiab_asm_integr_check_policy</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>jan.ostgren</sys_created_by>
+            <sys_created_on>2018-01-24 18:29:33</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>44c3622edbb3070089a3d1c2ca961912</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_apiab_asm_integr_check_policy</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ASM Integrator" source="x_apiab_asm_integr">3e101f4adb37c30089a3d1c2ca9619af</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="ASM Integrator">3e101f4adb37c30089a3d1c2ca9619af</sys_scope>
+            <sys_update_name>sys_ui_form_sections_44c3622edbb3070089a3d1c2ca961912</sys_update_name>
+            <sys_updated_by>jan.ostgren</sys_updated_by>
+            <sys_updated_on>2018-01-24 18:29:33</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
