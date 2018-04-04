@@ -23,14 +23,14 @@
         <sys_created_by>jan.ostgren</sys_created_by>
         <sys_created_on>2018-01-23 08:26:23</sys_created_on>
         <sys_id>3e101f4adb37c30089a3d1c2ca9619af</sys_id>
-        <sys_mod_count>41</sys_mod_count>
-        <sys_updated_by>jan.ostgren</sys_updated_by>
-        <sys_updated_on>2018-02-21 07:59:13</sys_updated_on>
+        <sys_mod_count>42</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-04 11:26:07</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.22</version>
+        <version>1.0.30</version>
     </sys_app>
 </record_update>
